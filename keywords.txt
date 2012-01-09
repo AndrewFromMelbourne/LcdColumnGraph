@@ -1,0 +1,26 @@
+#######################################
+# LcdColumnGraph
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+LcdColumnGraph	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+value	KEYWORD2
+unscaled	KEYWORD2
+getColumn	KEYWORD2
+setColumn	KEYWORD2
+getMin	KEYWORD2
+getMax	KEYWORD2
+setMinMax	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
