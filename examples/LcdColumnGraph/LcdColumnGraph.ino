@@ -29,7 +29,7 @@ void loop()
     {
         int32_t phase = col * 24;
         lcdColumnGraph.setColumn(col);
-        lcdColumnGraph.value(int(8.0 * sin((angle+phase) * 3.141592654 / 180.0)));
+        lcdColumnGraph.value(int(8.0 * sin((angle+phase) * DEG_TO_RAD)));
     }
     angle = (angle + 5) % 360;
     delay(30);
