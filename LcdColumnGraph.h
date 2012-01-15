@@ -29,18 +29,6 @@
 
 class LcdColumnGraph 
 {
-private: 
-
-	LiquidCrystal& _lcd;
-	int32_t _min;
-	int32_t _max;
-	uint8_t _column;
-	uint8_t _lastRow;
-	uint8_t _rows;
-	boolean _setup;
-
-	void setup();
-
 public:
 
 	LcdColumnGraph(
@@ -66,6 +54,17 @@ public:
 
 	void setMinMax(int32_t min, int32_t max) { _min = min; _max = max; }
 
+private: 
+
+	LiquidCrystal& _lcd;
+	int32_t _min;
+	int32_t _max;
+	uint8_t _column;
+	uint8_t _lastRow;
+	uint8_t _rows;
+	boolean _setup;
+
+	void setup();
 };
 
 //-------------------------------------------------------------------------
