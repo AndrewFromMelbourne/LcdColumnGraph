@@ -8,59 +8,59 @@ assume a 5x8 pixel LCD character.
 To use the code you need to create an LcdColumnGraph object. The constructor
 take the following parameters:-
 
-	LiquidCrystal& lcd
+    LiquidCrystal& lcd
 
-		A LiquidCrystal object.
+        A LiquidCrystal object.
 
-	int32_t min
+    int32_t min
 
-		The minimum value to be graphed
+        The minimum value to be graphed
 
-	int32_t max
+    int32_t max
 
-		The maximum value to be graphed
+        The maximum value to be graphed
 
-	uint8_t column
+    uint8_t column
 
-		The display column where the graph will be drawn
+        The display column where the graph will be drawn
 
-	uint8_t firstRow 
-	
-		The first row of the graph (default is 0)
+    uint8_t firstRow 
+    
+        The first row of the graph (default is 0)
 
-	uint8_t lastRow
+    uint8_t lastRow
 
-		The last row of the graph (default is 1)
+        The last row of the graph (default is 1)
 
 The methods are as follows:
 
-	void value(int32_t value);
+    void value(int32_t value);
 
-		Set the graph to 'value', scaled between min and max.
+        Set the graph to 'value', scaled between min and max.
 
-	void unscaled(uint8_t value);
+    void unscaled(uint8_t value);
 
-		The unscaled method allows you to to set the graph to a specific
-		level without using a scale between min and max. For example if the
-		graph is over two rows the graph can have an unscaled value between
-		0 and 16.
+        The unscaled method allows you to to set the graph to a specific
+        level without using a scale between min and max. For example if the
+        graph is over two rows the graph can have an unscaled value between
+        0 and 16.
 
-	uint8_t getColumn() const;
+    uint8_t getColumn() const;
 
-		Returns the column number where the graph will be displayed
+        Returns the column number where the graph will be displayed
 
-	void setColumn(uint8_t column);
+    void setColumn(uint8_t column);
 
-		Set the column number where the graph will be displayed
+        Set the column number where the graph will be displayed
 
-	int32_t getMin() const;
+    int32_t getMin() const;
 
-		Get the minimum value that the graph is mapped to.
+        Get the minimum value that the graph is mapped to.
 
-	int32_t getMax() const;
+    int32_t getMax() const;
 
-		Get the maximum value that the graph is mapped to.
+        Get the maximum value that the graph is mapped to.
 
-	void setMinMax(int32_t min, int32_t max);
+    void setMinMax(int32_t min, int32_t max);
 
-		Set the minimum and maximum values that the graph is mapped to.
+        Set the minimum and maximum values that the graph is mapped to.

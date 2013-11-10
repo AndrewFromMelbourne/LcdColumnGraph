@@ -31,40 +31,40 @@ class LcdColumnGraph
 {
 public:
 
-	LcdColumnGraph(
-		LiquidCrystal& lcd,
-		int32_t min,
-		int32_t max,
-		uint8_t column,
-		uint8_t firstRow = 0,
-		uint8_t lastRow = 1);
+    LcdColumnGraph(
+        LiquidCrystal& lcd,
+        int32_t min,
+        int32_t max,
+        uint8_t column,
+        uint8_t firstRow = 0,
+        uint8_t lastRow = 1);
 
-	void value(int32_t value)
-	{
-		unscaled(map(value, _min, _max, 0, _rows * 8));
-	}
+    void value(int32_t value)
+    {
+        unscaled(map(value, _min, _max, 0, _rows * 8));
+    }
 
-	void unscaled(uint8_t value);
+    void unscaled(uint8_t value);
 
-	uint8_t getColumn() const { return _column; }
-	void setColumn(uint8_t column) { _column = column; }
+    uint8_t getColumn() const { return _column; }
+    void setColumn(uint8_t column) { _column = column; }
 
-	int32_t getMin() const { return _min; }
-	int32_t getMax() const { return _max; }
+    int32_t getMin() const { return _min; }
+    int32_t getMax() const { return _max; }
 
-	void setMinMax(int32_t min, int32_t max) { _min = min; _max = max; }
+    void setMinMax(int32_t min, int32_t max) { _min = min; _max = max; }
 
 private: 
 
-	LiquidCrystal& _lcd;
-	int32_t _min;
-	int32_t _max;
-	uint8_t _column;
-	uint8_t _lastRow;
-	uint8_t _rows;
-	boolean _setup;
+    LiquidCrystal& _lcd;
+    int32_t _min;
+    int32_t _max;
+    uint8_t _column;
+    uint8_t _lastRow;
+    uint8_t _rows;
+    boolean _setup;
 
-	void setup();
+    void setup();
 };
 
 //-------------------------------------------------------------------------
