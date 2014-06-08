@@ -1,16 +1,25 @@
-The LcdColumnGraph library uses the LiquidCrystal library and the user
-defineable characters (via createChar) to provide a column graph that
-extends across a number of rows and can display eight different levels per
-row. For example in a two row LCD display the graph can display 16 different
-levels (not including zero). While the code is reasonably general, it does
-assume a 5x8 pixel LCD character.
+The LcdColumnGraph library is a templated class that uses the LiquidCrystal
+library (or similar) and the user defineable characters (via createChar) to
+provide a column graph that extends across a number of rows and can display
+eight different levels per row. For example in a two row LCD display the
+graph can display 16 different levels (not including zero). While the code
+is reasonably general, it does assume a 5x8 pixel LCD character.
 
-To use the code you need to create an LcdColumnGraph object. The constructor
-take the following parameters:-
+To use the code you need to create an LcdColumnGraph object, using the
+specific class that implements the calls to the LCD. For example to use the
+class with the standard LiquidCrystal class you create the object like this.
 
-    LiquidCrystal& lcd
+    LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
+    LcdColumnGraph<LiquidCrystal> lcdColumnGraph(lcd, 0, 10, 0);
 
-        A LiquidCrystal object.
+The advantage of using a template is that you can use any LiquidCrystal
+library with this class. For example LiquidCrystal_I2C.
+
+The constructor take the following parameters:-
+
+    LiquidCrystal_T& lcd
+
+        An object of the class you are using to drive the LCD.
 
     int32_t min
 

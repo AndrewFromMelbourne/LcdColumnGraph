@@ -2,7 +2,7 @@
 //
 // The MIT License (MIT)
 //
-// Copyright (c) 2013 Andrew Duncan
+// Copyright (c) 2014 Andrew Duncan
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -31,7 +31,7 @@
 //-------------------------------------------------------------------------
 
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
-LcdColumnGraph lcdColumnGraph(lcd, -8, 8, 0);
+LcdColumnGraph<LiquidCrystal> lcdColumnGraph(lcd, -8, 8, 0);
 
 //-------------------------------------------------------------------------
 
